@@ -5,7 +5,9 @@ from models import db, connect_db, Playlist, Song, PlaylistSong
 from forms import NewSongForPlaylistForm, SongForm, PlaylistForm
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://playlist_app_user:tTPbcdxSJpa8yEXCT2qBsTKZFo0rs6rw@dpg-cmfg0umn7f5s73c57h0g-a/playlist_app"
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgres://playlist_app_user:tTPbcdxSJpa8yEXCT2qBsTKZFo0rs6rw@dpg-cmfg0umn7f5s73c57h0g-a/playlist_app"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = True
 
@@ -21,7 +23,7 @@ app.config["SECRET_KEY"] = "I'LL NEVER TELL!!"
 #
 app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
 
-debug = DebugToolbarExtension(app)
+# debug = DebugToolbarExtension(app)
 
 
 @app.route("/")
